@@ -1,0 +1,5 @@
+FROM quay.io/drsylent/cubix/block2/homework-base:java17
+ENV VARIABLE CUBIX_HOMEWORK=attilaszegedi, APP_DEFAULT_MESSAGE=""
+LABEL key="cubix.homework.attilaszegedi"
+
+RUN docker build -t ./frontapp/target/cubix-second-homework-frontapp:0.0.1-SNAPSHOT
