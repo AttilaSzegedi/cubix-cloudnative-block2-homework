@@ -31,9 +31,7 @@ jobs:
     - name: front end dir change
       run: cd ./backapp
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    - name: verify 
-      run: mvn clean package
+      run: mvn -B clean package --file pom.xml
       
     - name: Upload artifact for Docker job
       uses: actions/upload-artifact@v3
