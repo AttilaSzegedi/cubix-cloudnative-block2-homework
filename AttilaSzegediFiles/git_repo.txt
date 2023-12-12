@@ -1,0 +1,4 @@
+https://github.com/AttilaSzegedi/cubix-cloudnative-block2-homework.git
+
+need to change the frontapp port to 8090 due to used by other app
+the testing are made also in postman in 8090 port
