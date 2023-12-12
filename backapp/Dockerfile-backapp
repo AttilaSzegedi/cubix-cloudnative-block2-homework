@@ -1,0 +1,13 @@
+FROM quay.io/drsylent/cubix/block2/homework-base:java17
+ENV VARIABLE CUBIX_HOMEWORK=attilaszegedi, APP_DEFAULT_MESSAGE=""
+LABEL key="cubix.homework.attilaszegedi"
+
+RUN mkdir /opt/backapp && chown 1001 -R /opt/backapp
+USER 1001
+WORKDIR /opt/backapp
+COPY --chown=1001 ./backapp/target/cubix-second-homework-backapp-0.0.1-SNAPSHOT.jar cubix-second-homework-backapp-0.0.1-SNAPSHOT.jar
+
+CMD ["java", "-jar","java -jar cubix-second-homework-backapp-0.0.1-SNAPSHOT.jar --back.url=http://localhost:8081"]
+
+
+
