@@ -1,0 +1,36 @@
+# 1 Docker file használata több container buildhez
+# 1. run parancs
+ docker build -t backapp --target backapp -f ./Dockerfile .
+ 
+ 
+# második run parancs
+ docker build -t frontapp --target frontapp -f ./Dockerfile.
+ 
+ 
+# image név ellenőrzés
+docker image ls
+
+
+# image label ellenőrzés frontapp
+docker inspect frontapp
+
+
+# image label ellenőzés backapp
+docker inspect backapp
+
+
+# de látható a buildnél átadott értéket mint ENV és label 
+docker image history frontapp
+
+# de látható a buildnél átadott értéket mint ENV és label 
+docker image history backapp
+
+#Docker-compose parancs a közös futattásra:
+docker-compose -f Docker-compose.yaml up -d
+
+# -d paraméter miatt terminálon látható a folyamatos log kiírás is:
+
+# De log kiírás részeltesen
+
+docker logs cubix-cloudnative-block2-homework-frontapp-1
+docker logs cubix-cloudnative-block2-homework-backapp-1
