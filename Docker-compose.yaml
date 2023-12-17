@@ -1,7 +1,9 @@
 services:
  backapp:
   image: backapp
-      
+  ports:
+  - 8081:8080
+    
  frontapp:
   image: frontapp
   ports:
