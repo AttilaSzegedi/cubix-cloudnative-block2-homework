@@ -1,10 +1,10 @@
 # 1 Docker file használata több container buildhez
 # 1. run parancs
- docker build -t backapp --target backapp -f ./Dockerfile .
+ docker build -t backapp -f ./Dockerfile ./backapp
  
  
 # második run parancs
- docker build -t frontapp --target frontapp -f ./Dockerfile.
+ docker build -t frontapp -f ./Dockerfile ./frontapp
  
  
 # image név ellenőrzés

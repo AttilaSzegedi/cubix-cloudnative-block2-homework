@@ -8,20 +8,13 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-12-12T13:59:01.865Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkBackapp     : Starting SecondHomeworkBackapp v0.0.1-SNAPSHOT using Java 17.0.9 with PID 1 (/opt/backapp/cubix-second-homework-backapp-0.0.1-SNAPSHOT.jar started by ? in /opt/backapp)
-2023-12-12T13:59:01.875Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkBackapp     : No active profile set, falling back to 1 default profile: "default"
-2023-12-12T13:59:04.505Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-12-12T13:59:04.544Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-12T13:59:04.546Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-12-12T13:59:04.813Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-12T13:59:04.819Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2720 ms
-2023-12-12T13:59:06.016Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-12-12T13:59:06.057Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkBackapp     : Started SecondHomeworkBackapp in 5.474 seconds (process running for 6.814)
-2023-12-12T14:01:26.914Z  INFO 1 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-12T14:01:26.914Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-12T14:01:26.918Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2023-12-12T14:01:26.984Z  INFO 1 --- [nio-8080-exec-2] hu.cubix.cloud.api.BackappController     : Request arrived with message Hello
-2023-12-12T14:01:26.988Z  INFO 1 --- [nio-8080-exec-2] hu.cubix.cloud.api.BackappController     : Returning response: BackappResponse[time=2023-12-12T14:01:26.986066877, message=Hello, homeworkOwner=backapp-me, hostAddress=172.26.0.3, extraImageData=Cubix training]
-2023-12-12T14:01:31.298Z  INFO 1 --- [nio-8080-exec-3] hu.cubix.cloud.api.BackappController     : Request arrived with message null
-2023-12-12T14:01:31.299Z  INFO 1 --- [nio-8080-exec-3] hu.cubix.cloud.api.BackappController     : Message was empty, fall back to default
-2023-12-12T14:01:31.299Z  INFO 1 --- [nio-8080-exec-3] hu.cubix.cloud.api.BackappController     : Returning response: BackappResponse[time=2023-12-12T14:01:31.299407951, message=DEFAULT-BACKAPP-MESSAGE, homeworkOwner=backapp-me, hostAddress=172.26.0.3, extraImageData=Cubix training]
+2023-12-17T21:30:32.052Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkBackapp     : Starting SecondHomeworkBackapp v0.0.1-SNAPSHOT using Java 17.0.9 with PID 1 (/opt/app/*.jar started by ? in /opt/app)
+2023-12-17T21:30:32.059Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkBackapp     : No active profile set, falling back to 1 default profile: "default"
+2023-12-17T21:30:35.441Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-17T21:30:35.476Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-17T21:30:35.477Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-17T21:30:35.816Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-17T21:30:35.821Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3620 ms
+2023-12-17T21:30:38.024Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-17T21:30:38.113Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkBackapp     : Started SecondHomeworkBackapp in 7.173 seconds (process running for 8.475)
+PS C:\CUBIX\devops\docker\cubix-cloudnative-block2-homework>
