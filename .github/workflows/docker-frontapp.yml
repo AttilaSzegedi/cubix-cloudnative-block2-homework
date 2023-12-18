@@ -34,7 +34,7 @@ jobs:
       run: cd ./frontapp
 
     - name: Build with Maven
-      run: mvn -B clean package 
+      run: mvn clean package 
       
     - name: Logging into docker
       run: docker login ghcr.io -u attilaszegedi -p ${{ github.token }}
