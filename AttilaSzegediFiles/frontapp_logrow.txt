@@ -1,4 +1,10 @@
-docker logs cubix-cloudnative-block2-homework-frontapp-1
+ docker-compose -f Docker-compose.yaml up -d
+[+] Building 0.0s (0/0)                                                                                                                                                 docker:default
+[+] Running 3/3
+ ✔ Network cubix-cloudnative-block2-homework_default       Created                                                                                                                0.0s
+ ✔ Container cubix-cloudnative-block2-homework-backapp-1   Started                                                                                                                0.1s
+ ✔ Container cubix-cloudnative-block2-homework-frontapp-1  Started                                                                                                                0.1s
+PS C:\CUBIX\devops\docker\cubix-cloudnative-block2-homework> docker logs cubix-cloudnative-block2-homework-frontapp-1
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -8,51 +14,38 @@ docker logs cubix-cloudnative-block2-homework-frontapp-1
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-12-17T21:30:32.492Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Starting SecondHomeworkFrontapp v0.0.1-SNAPSHOT using Java 17.0.9 with PID 1 (/opt/app/*.jar started by ? in /opt/app)
-2023-12-17T21:30:32.512Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : No active profile set, falling back to 1 default profile: "default"
-2023-12-17T21:30:35.590Z  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ce0bb17-3cef-3920-83b3-a6b609615a55
-2023-12-17T21:30:37.381Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-12-17T21:30:37.458Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-17T21:30:37.459Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-12-17T21:30:37.782Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-17T21:30:37.790Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5017 ms
-2023-12-17T21:30:40.465Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-12-17T21:30:40.532Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Started SecondHomeworkFrontapp in 9.235 seconds (process running for 10.745)
-2023-12-17T21:30:59.567Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-17T21:30:59.568Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-17T21:30:59.575Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2023-12-17T21:30:59.644Z  INFO 1 --- [nio-8080-exec-1] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: null
-2023-12-17T21:31:08.401Z  INFO 1 --- [nio-8080-exec-3] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: Hello
-2023-12-17T21:31:14.194Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: Hello
-2023-12-17T21:31:14.195Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Calling backapp
-2023-12-17T21:31:14.232Z ERROR 1 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Connection refused executing GET http://localhost:8081/backapp?message=Hello] with root cause
+2023-12-18T11:52:28.989Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Starting SecondHomeworkFrontapp v0.0.1-SNAPSHOT using Java 17.0.9 with PID 1 (/opt/app/*.jar started by ? in /opt/app)
+2023-12-18T11:52:28.996Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T11:52:31.758Z  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ce0bb17-3cef-3920-83b3-a6b609615a55
+2023-12-18T11:52:32.798Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-18T11:52:32.822Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T11:52:32.824Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-18T11:52:33.032Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T11:52:33.037Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3764 ms
+2023-12-18T11:52:34.302Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-18T11:52:34.329Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Started SecondHomeworkFrontapp in 6.935 seconds (process running for 8.274)
+2023-12-18T11:52:38.435Z  INFO 1 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T11:52:38.435Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T11:52:38.437Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-18T11:52:38.502Z  INFO 1 --- [nio-8080-exec-2] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: null
+2023-12-18T11:52:54.706Z  INFO 1 --- [nio-8080-exec-3] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: Hello
+2023-12-18T11:53:21.263Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: Hello
+2023-12-18T11:53:21.264Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Calling backapp
+2023-12-18T11:53:21.354Z ERROR 1 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message=Hello] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:21.316+00:00","status":404,"error":"Not Found","path":"/backapp"}]] with root cause
 
-java.net.ConnectException: Connection refused
-        at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-        at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
-        at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
-        at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
-        at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
-        at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:na]
-        at java.base/java.net.HttpURLConnection.getResponseCode(Unknown Source) ~[na:na]
-        at feign.Client$Default.convertResponse(Client.java:110) ~[feign-core-12.4.jar!/:na]
-        at feign.Client$Default.execute(Client.java:106) ~[feign-core-12.4.jar!/:na]
-        at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100) ~[feign-core-12.4.jar!/:na]
+feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message=Hello] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:21.316+00:00","status":404,"error":"Not Found","path":"/backapp"}]
+        at feign.FeignException.clientErrorStatus(FeignException.java:228) ~[feign-core-12.4.jar!/:na]
+        at feign.FeignException.errorStatus(FeignException.java:203) ~[feign-core-12.4.jar!/:na]
+        at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.4.jar!/:na]
+        at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:104) ~[feign-core-12.4.jar!/:na]
+        at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.4.jar!/:na]
+        at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.4.jar!/:na]
+        at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.4.jar!/:na]
         at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.4.jar!/:na]
         at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.4.jar!/:na]
         at jdk.proxy2/jdk.proxy2.$Proxy63.backapp(Unknown Source) ~[na:na]
-        at hu.cubix.cloud.api.controller.FrontappController.call(FrontappController.java:57) ~[classes!/:0.0.1-SNAPSHOT]        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+        at hu.cubix.cloud.api.controller.FrontappController.call(FrontappController.java:57) ~[classes!/:0.0.1-SNAPSHOT]
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
         at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
         at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
@@ -103,36 +96,23 @@ java.net.ConnectException: Connection refused
         at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar!/:na]
         at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
 
-2023-12-17T21:31:20.575Z  INFO 1 --- [nio-8080-exec-6] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: null
-2023-12-17T21:31:20.576Z  INFO 1 --- [nio-8080-exec-6] h.c.c.api.controller.FrontappController  : Calling backapp
-2023-12-17T21:31:20.580Z ERROR 1 --- [nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Connection refused executing GET http://localhost:8081/backapp?message] with root cause
+2023-12-18T11:53:32.027Z  INFO 1 --- [nio-8080-exec-7] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: null
+2023-12-18T11:53:32.028Z  INFO 1 --- [nio-8080-exec-7] h.c.c.api.controller.FrontappController  : Calling backapp
+2023-12-18T11:53:32.042Z ERROR 1 --- [nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:32.038+00:00","status":404,"error":"Not Found","path":"/backapp"}]] with root cause
 
-java.net.ConnectException: Connection refused
-        at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-        at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
-        at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
-        at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
-        at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
-        at java.base/sun.net.NetworkClient.doConnect(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.http.HttpClient.New(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source) ~[na:na]
-        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source) ~[na:na]
-        at java.base/java.net.HttpURLConnection.getResponseCode(Unknown Source) ~[na:na]
-        at feign.Client$Default.convertResponse(Client.java:110) ~[feign-core-12.4.jar!/:na]
-        at feign.Client$Default.execute(Client.java:106) ~[feign-core-12.4.jar!/:na]
-        at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:100) ~[feign-core-12.4.jar!/:na]
+feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:32.038+00:00","status":404,"error":"Not Found","path":"/backapp"}]
+        at feign.FeignException.clientErrorStatus(FeignException.java:228) ~[feign-core-12.4.jar!/:na]
+        at feign.FeignException.errorStatus(FeignException.java:203) ~[feign-core-12.4.jar!/:na]
+        at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.4.jar!/:na]
+        at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:104) ~[feign-core-12.4.jar!/:na]
+        at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.4.jar!/:na]
+        at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.4.jar!/:na]
+        at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.4.jar!/:na]
         at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.4.jar!/:na]
         at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.4.jar!/:na]
         at jdk.proxy2/jdk.proxy2.$Proxy63.backapp(Unknown Source) ~[na:na]
-        at hu.cubix.cloud.api.controller.FrontappController.call(FrontappController.java:57) ~[classes!/:0.0.1-SNAPSHOT]        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+        at hu.cubix.cloud.api.controller.FrontappController.call(FrontappController.java:57) ~[classes!/:0.0.1-SNAPSHOT]
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
         at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
         at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
