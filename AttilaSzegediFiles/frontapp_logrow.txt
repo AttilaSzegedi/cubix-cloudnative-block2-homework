@@ -1,10 +1,4 @@
- docker-compose -f Docker-compose.yaml up -d
-[+] Building 0.0s (0/0)                                                                                                                                                 docker:default
-[+] Running 3/3
- ✔ Network cubix-cloudnative-block2-homework_default       Created                                                                                                                0.0s
- ✔ Container cubix-cloudnative-block2-homework-backapp-1   Started                                                                                                                0.1s
- ✔ Container cubix-cloudnative-block2-homework-frontapp-1  Started                                                                                                                0.1s
-PS C:\CUBIX\devops\docker\cubix-cloudnative-block2-homework> docker logs cubix-cloudnative-block2-homework-frontapp-1
+docker logs cubix-cloudnative-block2-homework-frontapp-1
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,151 +8,26 @@ PS C:\CUBIX\devops\docker\cubix-cloudnative-block2-homework> docker logs cubix-c
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-12-18T11:52:28.989Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Starting SecondHomeworkFrontapp v0.0.1-SNAPSHOT using Java 17.0.9 with PID 1 (/opt/app/*.jar started by ? in /opt/app)
-2023-12-18T11:52:28.996Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : No active profile set, falling back to 1 default profile: "default"
-2023-12-18T11:52:31.758Z  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ce0bb17-3cef-3920-83b3-a6b609615a55
-2023-12-18T11:52:32.798Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-12-18T11:52:32.822Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-18T11:52:32.824Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2023-12-18T11:52:33.032Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-18T11:52:33.037Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3764 ms
-2023-12-18T11:52:34.302Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-12-18T11:52:34.329Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Started SecondHomeworkFrontapp in 6.935 seconds (process running for 8.274)
-2023-12-18T11:52:38.435Z  INFO 1 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-18T11:52:38.435Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-18T11:52:38.437Z  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-18T11:52:38.502Z  INFO 1 --- [nio-8080-exec-2] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: null
-2023-12-18T11:52:54.706Z  INFO 1 --- [nio-8080-exec-3] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: Hello
-2023-12-18T11:53:21.263Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: Hello
-2023-12-18T11:53:21.264Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Calling backapp
-2023-12-18T11:53:21.354Z ERROR 1 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message=Hello] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:21.316+00:00","status":404,"error":"Not Found","path":"/backapp"}]] with root cause
-
-feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message=Hello] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:21.316+00:00","status":404,"error":"Not Found","path":"/backapp"}]
-        at feign.FeignException.clientErrorStatus(FeignException.java:228) ~[feign-core-12.4.jar!/:na]
-        at feign.FeignException.errorStatus(FeignException.java:203) ~[feign-core-12.4.jar!/:na]
-        at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.4.jar!/:na]
-        at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:104) ~[feign-core-12.4.jar!/:na]
-        at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.4.jar!/:na]
-        at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.4.jar!/:na]
-        at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.4.jar!/:na]
-        at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.4.jar!/:na]
-        at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.4.jar!/:na]
-        at jdk.proxy2/jdk.proxy2.$Proxy63.backapp(Unknown Source) ~[na:na]
-        at hu.cubix.cloud.api.controller.FrontappController.call(FrontappController.java:57) ~[classes!/:0.0.1-SNAPSHOT]
-        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-        at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-        at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2023-12-18T11:53:32.027Z  INFO 1 --- [nio-8080-exec-7] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: null
-2023-12-18T11:53:32.028Z  INFO 1 --- [nio-8080-exec-7] h.c.c.api.controller.FrontappController  : Calling backapp
-2023-12-18T11:53:32.042Z ERROR 1 --- [nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:32.038+00:00","status":404,"error":"Not Found","path":"/backapp"}]] with root cause
-
-feign.FeignException$NotFound: [404] during [GET] to [http://localhost:8080/backapp?message] [BackappApi#backapp(String)]: [{"timestamp":"2023-12-18T11:53:32.038+00:00","status":404,"error":"Not Found","path":"/backapp"}]
-        at feign.FeignException.clientErrorStatus(FeignException.java:228) ~[feign-core-12.4.jar!/:na]
-        at feign.FeignException.errorStatus(FeignException.java:203) ~[feign-core-12.4.jar!/:na]
-        at feign.FeignException.errorStatus(FeignException.java:194) ~[feign-core-12.4.jar!/:na]
-        at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:104) ~[feign-core-12.4.jar!/:na]
-        at feign.ResponseHandler.decodeError(ResponseHandler.java:136) ~[feign-core-12.4.jar!/:na]
-        at feign.ResponseHandler.handleResponse(ResponseHandler.java:70) ~[feign-core-12.4.jar!/:na]
-        at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:114) ~[feign-core-12.4.jar!/:na]
-        at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:70) ~[feign-core-12.4.jar!/:na]
-        at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:96) ~[feign-core-12.4.jar!/:na]
-        at jdk.proxy2/jdk.proxy2.$Proxy63.backapp(Unknown Source) ~[na:na]
-        at hu.cubix.cloud.api.controller.FrontappController.call(FrontappController.java:57) ~[classes!/:0.0.1-SNAPSHOT]
-        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-        at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-        at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar!/:6.0.13]
-        at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar!/:6.0.13]
-        at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar!/:na]
-        at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+2023-12-18T15:08:04.484Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Starting SecondHomeworkFrontapp v0.0.1-SNAPSHOT using Java 17.0.9 with PID 1 (/opt/app/*.jar started by ? in /opt/app)
+2023-12-18T15:08:04.490Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : No active profile set, falling back to 1 default profile: "default"
+2023-12-18T15:08:07.665Z  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ce0bb17-3cef-3920-83b3-a6b609615a55
+2023-12-18T15:08:08.782Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-18T15:08:08.844Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-18T15:08:08.845Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-18T15:08:09.167Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-18T15:08:09.179Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4281 ms
+2023-12-18T15:08:10.762Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-18T15:08:10.790Z  INFO 1 --- [           main] hu.cubix.cloud.SecondHomeworkFrontapp    : Started SecondHomeworkFrontapp in 7.582 seconds (process running for 9.089)
+2023-12-18T15:08:22.262Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-18T15:08:22.263Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-18T15:08:22.265Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-18T15:08:22.346Z  INFO 1 --- [nio-8080-exec-1] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: null
+2023-12-18T15:08:29.770Z  INFO 1 --- [nio-8080-exec-3] h.c.c.api.controller.FrontappController  : Local endpoint was called - no call will be made to backapp - message was: Hello
+2023-12-18T15:08:33.350Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: Hello
+2023-12-18T15:08:33.350Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Calling backapp
+2023-12-18T15:08:33.734Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Backapp call was successful, response was: BackappResponse[time=2023-12-18T15:08:33.558087921, message=Hello, homeworkOwner=attilaszegedi,, hostAddress=192.168.0.3, extraImageData=Cubix training]
+2023-12-18T15:08:33.742Z  INFO 1 --- [nio-8080-exec-4] h.c.c.api.controller.FrontappController  : Response will be: FrontappResponse[msForReply=207, backappMessage=Hello, frontappHomeworkOwner=attilaszegedi,, frontappHostAddress=192.168.0.2, backappHomeworkOwner=attilaszegedi,, backappHostAddress=192.168.0.3, doExtraImageDataMatch=true]
+2023-12-18T15:08:38.952Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Preparing for calling backapp - message was: null
+2023-12-18T15:08:38.952Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Calling backapp
+2023-12-18T15:08:38.964Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Backapp call was successful, response was: BackappResponse[time=2023-12-18T15:08:38.958749081, message=hardcoded-default-backapp-message, homeworkOwner=attilaszegedi,, hostAddress=192.168.0.3, extraImageData=Cubix training]
+2023-12-18T15:08:38.966Z  INFO 1 --- [nio-8080-exec-5] h.c.c.api.controller.FrontappController  : Response will be: FrontappResponse[msForReply=6, backappMessage=hardcoded-default-backapp-message, frontappHomeworkOwner=attilaszegedi,, frontappHostAddress=192.168.0.2, backappHomeworkOwner=attilaszegedi,, backappHostAddress=192.168.0.3, doExtraImageDataMatch=true]
