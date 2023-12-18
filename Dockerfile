@@ -5,6 +5,6 @@ LABEL cubix.homework.owner=attilaszegedi
 RUN mkdir /opt/app && chown 1001 -R /opt/app
 USER 1001
 WORKDIR /opt/app
-COPY --chown=1001 ../target/*.jar *.jar
+COPY --chown=1001 target/*.jar app.jar
 
-CMD ["java","-jar","*.jar"]
+CMD ["java","-jar","app.jar"]
