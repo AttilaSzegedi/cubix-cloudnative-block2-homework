@@ -40,7 +40,7 @@ jobs:
       run: docker build -t backapp -f ./Dockerfile ./backapp
 
     - name: Publish docker
-      run: docker push ghcr.io/attilaszegedi/cubix-cloudnative-block2-homework-backapp:actions
+      run: docker push ghcr.io/attilaszegedi/cubix-cloudnative-block2-homework-backapp-1:actions
 
 
    
