@@ -31,10 +31,7 @@ jobs:
       run: mvn -version
 
     - name: front end dir change
-      run: cd ./backapp
-
-    - name: Build with Maven
-      run: mvnw clean package 
+      run: cd ./backapp && mvnw clean package 
       
     - name: Logging into docker
       run: docker login ghcr.io -u attilaszegedi -p ${{ github.token }}
