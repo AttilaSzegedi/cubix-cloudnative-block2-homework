@@ -5,5 +5,5 @@ LABEL key="cubix.homework.attilaszegedi"
 
 
 
-COPY --chown=1001 ./frontapp/target/cubix-second-homework-frontapp-0.0.1-SNAPSHOT.jar cubix-second-homework-frontapp-0.0.1-SNAPSHOT.jar
+
 CMD ["java","-jar","cubix-second-homework-frontapp-0.0.1-SNAPSHOT.jar"]
