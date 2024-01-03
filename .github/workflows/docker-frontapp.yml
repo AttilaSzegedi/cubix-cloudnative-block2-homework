@@ -33,14 +33,12 @@ jobs:
     - name: front end dir change
       run: cd ./frontapp && ./mvnw clean package 
       
-    - name: Logging into docker
-      run: docker login ghcr.io -u attilaszegedi -p ${{ github.token }}
-
-    - name: Build docker
-      run: docker build -t frontapp -f ./Dockerfile ./frontapp
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ghcr.io/attilaszegedi/block3/homework-frontapp:springboot3
 
     - name: Publish docker
-      run: docker push ghcr.io/attilaszegedi/cubix/homework-2-frontapp:actions
+      run: docker push ghcr.io/attilaszegedi/block3/homework-frontapp:springboot3
 
 
    
