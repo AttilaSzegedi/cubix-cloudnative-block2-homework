@@ -35,7 +35,7 @@ jobs:
       
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t backapp -f ./Dockerfile ./backapp --tag ghcr.io/attilaszegedi/block3/homework-frontapp:springboot3 && docker push ghcr.io/attilaszegedi/block3/homework-frontapp:springboot3
+      run: docker build -t frontkapp -f ./Dockerfile ./frontapp --tag ghcr.io/attilaszegedi/block3/homework-frontapp:springboot3 && docker push ghcr.io/attilaszegedi/block3/homework-frontapp:springboot3
 
 
    
